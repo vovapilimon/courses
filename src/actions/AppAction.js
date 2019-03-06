@@ -10,12 +10,14 @@ export function loadParams() {
     })
 
     const {subjects,genres,grades} = json;
+
     const obj = {
       subject:subjects[0],
       genre:genres[0],
       grade:grades[0],
     };
-    axios.post(URL, {
+    axios.post(URL,
+      {
       data: JSON.stringify(obj)
     })
     .then(res=>{
